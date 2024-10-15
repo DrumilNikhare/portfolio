@@ -1,0 +1,370 @@
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link rel="stylesheet" as="style" onload="this.rel='stylesheet'"
+        href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700" />
+
+    <title>Drumil Nikhare</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="relative flex size-full min-h-screen flex-col bg-[#101a23] dark group/design-root overflow-x-hidden"
+        style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
+        <div class="layout-container flex h-full grow flex-col">
+            <header
+                class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#223749] px-10 py-3">
+                <div class="flex items-center gap-4 text-white">
+                    <div class="size-4">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_6_319)">
+                                <path
+                                    d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z"
+                                    fill="currentColor"></path>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_6_319">
+                                    <rect width="48" height="48" fill="white"></rect>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+
+                    <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Portfolio</h2>
+                </div>
+                <div class="flex flex-1 justify-end gap-8">
+                    <div class="flex items-center gap-9">
+                        <a class="text-white text-sm font-medium leading-normal" href="project.html">Projects</a>
+                        <a class="text-white text-sm font-medium leading-normal" href="aboutme.html">About Me</a>
+                        <a class="text-white text-sm font-medium leading-normal" href="Resume.pdf">Resume</a>
+                    </div>
+                    <div class="flex gap-2">
+                        <button
+                            class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 bg-[#223749] text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5">
+                            <div class="text-white" data-icon="MagnifyingGlass" data-size="20px" data-weight="regular">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor"
+                                    viewBox="0 0 256 256">
+                                    <path
+                                        d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </button>
+                        <button
+                            class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 bg-[#223749] text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5">
+                            <div class="text-white" data-icon="List" data-size="20px" data-weight="regular">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor"
+                                    viewBox="0 0 256 256">
+                                    <path
+                                        d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+                        style='background-image: url("me.png");'>
+                    </div>
+                </div>
+            </header>
+            <div class="relative px-40 flex flex-1 justify-center py-5">
+                <!-- Background Video -->
+                <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover opacity-50">
+                    <source src="b3.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <!-- Content Container with Background Image -->
+                <div class="layout-content-container flex flex-col max-w-[960px] flex-1 relative z-10">
+                    <div class="@container">
+                        <div class="@[480px]:p-4">
+                            <div
+                                class="relative flex min-h-[480px] flex-col gap-6 @[480px]:gap-8 @[480px]:rounded-xl items-start justify-end px-4 pb-10 @[480px]:px-10">
+                                <!-- Background video -->
+                                <video autoplay muted loop playsinline
+                                    class="absolute inset-0 w-full h-full object-cover z-[-1]">
+                                    <source src="b11.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+
+
+                                <!-- Content -->
+                                <h1 class="text-white text-4xl font-bold"></h1>
+                                <p class="text-white"></p>
+
+                                <div class="typewriter-container">
+                                    <h1
+                                        class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] text-center">
+                                        <span id="typewriter"></span>
+                                    </h1>
+                                </div>
+
+
+
+                                <script>
+                                    const text = "Hi, I'm Drumil. I'm a developer";
+                                    let index = 0;
+
+                                    function typeWriter() {
+                                        if (index < text.length) {
+                                            document.getElementById("typewriter").innerHTML += text.charAt(index);
+                                            index++;
+                                            setTimeout(typeWriter, 100); // Adjust typing speed here
+                                        }
+                                    }
+
+                                    window.onload = function () {
+                                        typeWriter(); // Start typing animation when the page loads
+                                    };
+                                </script>
+
+
+
+
+
+
+                                <button class="text-box"
+                                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#2094f3] text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
+                                    onclick="window.open('Resume.pdf', '_blank')">
+
+                                    <a href="#" class="btn btn-white btn-        animate">click me</a>
+
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Skills
+                        and Tools</h2>
+                    <div class="flex gap-3 p-3 flex-wrap pr-4">
+                        <div class="flex flex-wrap gap-4">
+                            <!-- Python button -->
+                            <div>
+                                <button
+                                    class="flex h-8 items-center justify-center gap-x-2 rounded-xl bg-[#223749] pl-4 pr-2"
+                                    onclick="toggleDropdown('dropdown-python')">
+                                    <p class="text-white text-sm font-medium">Python</p>
+                                    <div class="text-white">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"
+                                            fill="currentColor" viewBox="0 0 256 256">
+                                            <path
+                                                d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </button>
+                                <div id="dropdown-python" class="hidden mt-2 rounded-xl bg-[#223749] p-2">
+                                    <ul class="text-white">
+                                        <li><a href="#" class="block py-1">Python Tutorial</a></li>
+                                        <li><a href="#" class="block py-1">Python Libraries</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- PyTorch button -->
+                            <div>
+                                <button
+                                    class="flex h-8 items-center justify-center gap-x-2 rounded-xl bg-[#223749] pl-4 pr-2"
+                                    onclick="toggleDropdown('dropdown-pytorch')">
+                                    <p class="text-white text-sm font-medium">PyTorch</p>
+                                    <div class="text-white">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"
+                                            fill="currentColor" viewBox="0 0 256 256">
+                                            <path
+                                                d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </button>
+                                <div id="dropdown-pytorch" class="hidden mt-2 rounded-xl bg-[#223749] p-2">
+                                    <ul class="text-white">
+                                        <li><a href="#" class="block py-1">PyTorch Documentation</a></li>
+                                        <li><a href="#" class="block py-1">PyTorch Tutorials</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Keras button -->
+                            <div>
+                                <button
+                                    class="flex h-8 items-center justify-center gap-x-2 rounded-xl bg-[#223749] pl-4 pr-2"
+                                    onclick="toggleDropdown('dropdown-keras')">
+                                    <p class="text-white text-sm font-medium">Keras</p>
+                                    <div class="text-white">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"
+                                            fill="currentColor" viewBox="0 0 256 256">
+                                            <path
+                                                d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </button>
+                                <div id="dropdown-keras" class="hidden mt-2 rounded-xl bg-[#223749] p-2">
+                                    <ul class="text-white">
+                                        <li><a href="#" class="block py-1">Keras API</a></li>
+                                        <li><a href="#" class="block py-1">Keras Guide</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Add more buttons as needed -->
+                        </div>
+
+                        <script>
+                            function toggleDropdown(id) {
+                                document.getElementById(id).classList.toggle('hidden');
+                            }
+                        </script>
+
+                    </div>
+                    <h2 id="featured-projects"
+                        class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
+                        Featured Projects</h2>
+
+
+
+                    <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+                        <div class="flex flex-col gap-3 pb-3">
+                            <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
+                                style='background-image: url("i1.png");'>
+                            </div>
+                            <div>
+                                <p class="text-white text-base font-medium leading-normal">Phishing Tool</p>
+                                <p class="text-[#90b0cb] text-sm font-normal leading-normal">
+                                    Phishing Tool: Detects and analyzes phishing attempts to enhance online security and
+                                    protect user data.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3 pb-3">
+                            <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
+                                style='background-image: url("i2.png");'>
+                            </div>
+                            <div>
+                                <p class="text-white text-base font-medium leading-normal">Diabetes Prediction</p>
+                                <p class="text-[#90b0cb] text-sm font-normal leading-normal">
+                                    Diabetes Prediction uses machine learning algorithms to analyze patient data and
+                                    identify the likelihood of developing diabetes, enabling early intervention and
+                                    personalized treatment
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3 pb-3">
+                            <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
+                                style='background-image: url("i3.png");'>
+                            </div>
+                            <div>
+                                <p class="text-white text-base font-medium leading-normal">Heart Disease Prediction</p>
+                                <p class="text-[#90b0cb] text-sm font-normal leading-normal">Developed a machine
+                                    learning model to predict the likelihood of heart disease using patient data,
+                                    achieving an accuracy of over 85%.</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3 pb-3">
+                            <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
+                                style='background-image: url("i4.png");'>
+                            </div>
+                            <div>
+                                <p class="text-white text-base font-medium leading-normal">sonar rock vs mine</p>
+                                <p class="text-[#90b0cb] text-sm font-normal leading-normal">
+                                    Sonar Rock detects underwater objects using sound waves, while a mine is an
+                                    explosive device designed to detonate upon contact or proximity.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3 pb-3">
+                            <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
+                                style='background-image: url("i5.png");'>
+                            </div>
+                            <div>
+                                <p class="text-white text-base font-medium leading-normal">Text Encryption Tool</p>
+                                <p class="text-[#90b0cb] text-sm font-normal leading-normal">
+                                    A user-friendly application that securely encrypts and decrypts text, ensuring data
+                                    privacy and protection against unauthorized access
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
+                        Certifications</h2>
+                    <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+                        <div class="flex flex-col gap-3">
+                            <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
+                                style='background-image: url("c1.jpg");'>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3">
+                            <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
+                                style='background-image: url("c2.jpg");'>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3">
+                            <!-- <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
+                                style='background-image: url("https://cdn.usegalileo.ai/sdxl10/5594a83a-a146-41e0-8f44-7ad04cd43d50.png");'>
+                            </div> -->
+                        </div>
+                    </div>
+                    <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Blog
+                        Posts</h2>
+                    <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+                        <div class="flex flex-col gap-3 pb-3">
+                            <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
+                                style='background-image: url("a1.png");'>
+                            </div>
+                            <div>
+                                <p class="text-white text-base font-medium leading-normal">Sigmoid Function in Machine
+                                    Learning
+                                </p>
+                                <p class="text-[#90b0cb] text-sm font-normal leading-normal">The sigmoid function is a
+                                    mathematical function that maps any real-valued number into a value between 0 and 1,
+                                    often used to represent probabilities in machine learning.</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3 pb-3">
+                            <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
+                                style='background-image: url("a2.png");'>
+                            </div>
+                            <div>
+                                <p class="text-white text-base font-medium leading-normal">Phishing Tools for Advanced
+                                    Protection</p>
+                                <p class="text-[#90b0cb] text-sm font-normal leading-normal">A phishing detection tool
+                                    is a software solution that analyzes URLs, emails, and website content to identify
+                                    and block fraudulent attempts aimed at stealing sensitive information.</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3 pb-3">
+                            <!-- <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
+                                style='background-image: url("https://cdn.usegalileo.ai/sdxl10/d960f13b-4c77-4d1c-b9a7-4f086e66f972.png");'>
+                            </div>
+                            <div>
+                                <p class="text-white text-base font-medium leading-normal">An Introduction to
+                                    Convolutional Neural Networks (CNNs)</p>
+                                <p class="text-[#90b0cb] text-sm font-normal leading-normal">Dive into the world of
+                                    computer vision and the magic of CNNs</p>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="flex px-4 py-3">
+                        <button id="loadMoreButton" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 flex-1 bg-[#223749] text-white text-sm font-bold leading-normal tracking-[0.015em] transition-all duration-300 transform hover:scale-105 hover:bg-[#2a4358] active:scale-95">
+                            <span class="truncate">Know more about me</span>
+                        </button>
+                        
+                        <script>
+                            document.getElementById("loadMoreButton").addEventListener("click", function() {
+                                window.location.href = "aboutme.html"; // Change "another-page.html" to your target file
+                            });
+                        </script>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

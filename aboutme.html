@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me with Donut Animation and Video Background</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Full-screen video */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Container for the content */
+        .content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+            color: white;
+            background: rgba(0, 0, 0, 0.5); /* Slight dark overlay */
+        }
+
+        .about-text {
+            max-width: 50%;
+        }
+
+        
+        h1 {
+            font-size: 48px;
+            color: #ffffff;
+            overflow: hidden; /* Ensures text is hidden until revealed */
+            white-space: nowrap; /* Prevents text wrapping */
+            border-right: 4px solid #333; /* Creates a cursor effect */
+            width: 0; /* Start width at 0 for animation */
+            animation: typing 4s steps(10) forwards, blink 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink {
+            from, to { border-color: transparent; }
+            50% { border-color: #333; }
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 1rem;
+            color: white;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 24px; /* Add some padding */
+            font-size: 16px;
+            color: #fff;
+            background-color: #000000; /* Twitter blue */
+            border: none;
+            border-radius: 5px;
+            text-decoration: none; /* Remove underline */
+            transition: transform 0.3s, background-color 0.3s; /* Transition for hover effect */
+            cursor: pointer; /* Change cursor to pointer */
+        }
+
+        .button:hover {
+            background-color: #202020; /* Darker blue on hover */
+            transform: scale(1.1); /* Slightly enlarge on hover */
+        }
+
+        .button:active {
+            transform: scale(0.95); /* Slightly shrink when clicked */
+        }
+   
+
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            margin-right: 10px;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .social-links a:hover {
+            color: #ccc;
+        }
+
+        /* ASCII Donut Styles */
+        #asciiCanvas {
+            white-space: pre;
+            font-size: 12px;
+            line-height: 10px;
+            text-align: center;
+            margin-right: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Video -->
+    <video class="video-background" autoplay muted loop>
+        <source src="b3.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Content with Donut Animation and About Me -->
+    <div class="content">
+        <!-- ASCII Donut Section -->
+        <div id="asciiCanvas"></div>
+
+        <div class="about-text">
+            <h1 id="aboutMe"></h1>
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const aboutMeElement = document.getElementById("aboutMe");
+                    const text = "About Me";
+                    let index = 0;
+        
+                    function type() {
+                        if (index < text.length) {
+                            aboutMeElement.textContent += text.charAt(index);
+                            index++;
+                            setTimeout(type, 300); // Adjust typing speed here
+                        }
+                    }
+        
+                    type();
+                });
+            </script>
+            <p>
+                Hi, I'm Drumil! I'm passionate about technology and creating solutions that make an impact. 
+                Whether it's developing applications, enhancing cybersecurity measures, or learning the latest in AI and machine learning, 
+                I'm constantly looking for ways to grow and evolve in the tech space.
+            </p>
+            <p>
+                Currently, I am working on various exciting projects, ranging from web development to deep learning, and my goal is to build tools that can solve real-world problems. 
+                I'm also exploring new avenues like cloud security and improving my skills in programming, networking, and cybersecurity.
+            </p>
+            <div class="social-links">
+                <a href="https://x.com/Drumil_Nikhare" class="button">Twitter</a>
+                <a href="https://github.com/DrumilNikhare" class="button">Github</a>
+                <a href="https://www.linkedin.com/in/drumilnikhare/" class="button">linkedin</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ASCII Donut Animation
+        const canvas = document.getElementById('asciiCanvas');
+        let A = 0, B = 0;
+
+        function renderFrame() {
+            const b = [];
+            const z = [];
+            const width = 80;
+            const height = 22;
+
+            for (let i = 0; i < width * height; i++) {
+                b[i] = ' ';
+                z[i] = 0;
+            }
+
+            for (let j = 0; j < 6.28; j += 0.07) {
+                for (let i = 0; i < 6.28; i += 0.02) {
+                    const c = Math.sin(i);
+                    const d = Math.cos(j);
+                    const e = Math.sin(A);
+                    const f = Math.sin(j);
+                    const g = Math.cos(A);
+                    const h = d + 2;
+                    const D = 1 / (c * h * e + f * g + 5);
+                    const l = Math.cos(i);
+                    const m = Math.cos(B);
+                    const n = Math.sin(B);
+                    const t = c * h * g - f * e;
+
+                    const x = Math.floor(40 + 30 * D * (l * h * m - t * n));
+                    const y = Math.floor(12 + 15 * D * (l * h * n + t * m));
+                    const N = Math.floor(8 * ((f * e - c * d * g) * m - c * d * e - f * g - l * d * n));
+
+                    const o = x + width * y;
+                    if (height > y && y > 0 && x > 0 && width > x && D > z[o]) {
+                        z[o] = D;
+                        b[o] = ".,-~:;=!*#$@"[N > 0 ? N : 0];
+                    }
+                }
+            }
+
+            canvas.innerHTML = '';
+            for (let k = 0; k < width * height; k++) {
+                canvas.innerHTML += k % width ? b[k] : '\n';
+            }
+
+            A += 0.04;
+            B += 0.02;
+            requestAnimationFrame(renderFrame);
+        }
+
+        renderFrame();
+    </script>
+
+</body>
+</html>

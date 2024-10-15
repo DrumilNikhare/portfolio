@@ -1,0 +1,295 @@
+/* Base styles */
+body {
+    font-family: 'Space Grotesk', 'Noto Sans', sans-serif;
+    background-color: #101a23;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.object-cover {
+    object-fit: cover;
+}
+
+.opacity-50 {
+    opacity: 0.9; /* Adjust as needed */
+}
+
+
+.typewriter-container {
+    width: 500px; /* Set a fixed width, adjust as needed */
+    height: auto; /* Height adjusts based on the content */
+    margin: 0 auto; /* Center the container */
+    overflow: hidden; /* Keep overflow hidden (optional, for a clean look) */
+    word-wrap: break-word; /* Breaks words when they exceed the width */
+    text-align: center; /* Center the text inside the container */
+}
+
+#typewriter {
+    border-right: 2px solid white;
+    display: inline-block;
+    animation: blink-cursor 0.8s steps(1) infinite;
+}
+
+@keyframes blink-cursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+.text-box {
+    margin-left: 44vw;
+   margin-top: 42vh;
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: absolute;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* Only apply to the project cards */
+.grid .flex {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* On hover, the specific project card will scale up */
+.grid .flex:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    z-index: 10; /* Ensures the card appears on top */
+}
+
+#featured-projects {
+    border-right: 2px solid white; /* Optional cursor effect */
+    animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    border-bottom: 1px solid #223749;
+}
+
+header h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+header button {
+    background-color: #223749;
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 700;
+    padding: 5px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+header button svg {
+    margin-right: 8px;
+}
+
+header .profile-pic {
+    background-size: cover;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Hero Section */
+.hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)), url('https://cdn.usegalileo.ai/sdxl10/f8437724-a037-4c8d-a45e-00b90b1543fd.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 480px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.hero-section button {
+    background-color: #2094f3;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Skills section */
+.skills-section h2 {
+    font-size: 1.375rem;
+    font-weight: 700;
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.skills-section .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 0 20px;
+}
+
+.skills-list button {
+    background-color: #223749;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 10px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.skills-list button svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Featured Projects section */
+.projects-section h2 {
+    font-size: 1.375rem;
+    font-weight: 700;
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 15px;
+    padding: 0 20px;
+}
+
+.project-card {
+    background-color: #223749;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.project-card img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 10px 0 5px;
+}
+
+.project-card p {
+    font-size: 0.875rem;
+    color: #90b0cb;
+}
